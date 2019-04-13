@@ -15,14 +15,14 @@ export class Footer extends Component {
   render() {
     return (
       <footer style={FooterStyle}>
-        <div>
+        <div>            
           <a
             href="https://github.com/vedkale/"
             target="_blank"
             rel="noopener noreferrer"
             style={linkStyle}
           >
-            <FontAwesomeIcon icon={["fab", "github"]} size="3x" />{" "}
+            <FontAwesomeIcon icon={["fab", "github"]} size="3x" />
           </a>
           <a
             href="https://www.linkedin.com/in/vedkale/"
@@ -30,7 +30,7 @@ export class Footer extends Component {
             rel="noopener noreferrer"
             style={linkStyle}
           >
-            <FontAwesomeIcon icon={["fab", "linkedin"]} size="3x" />{" "}
+            <FontAwesomeIcon icon={["fab", "linkedin"]} size="3x" />
           </a>
           <a
             href="https://www.kaggle.com/vedkale/"
@@ -38,7 +38,7 @@ export class Footer extends Component {
             rel="noopener noreferrer"
             style={linkStyle}
           >
-            <FontAwesomeIcon icon={["fab", "kaggle"]} size="3x" />{" "}
+            <FontAwesomeIcon icon={["fab", "kaggle"]} size="3x" />
           </a>
         </div>
         <div>

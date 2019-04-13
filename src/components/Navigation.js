@@ -52,9 +52,9 @@ export class Navigation extends Component {
       <nav id='nav' className={stickyClass} style={{background: this.state.tranparency, transition:'all 0.3s ease-in', pointerEvents:'auto'}}>
         <ul>
           <li><a href="/"> Home </a> </li>
-          <li><a href="/"> Skills </a></li>
+          <li><a href="#skills"> Skills </a></li>
           <li><a href={resume} target="_blank" rel="noopener noreferrer">Resume</a></li>
-          <li><a href="/">Contact</a></li>
+          <li><a href="#contact">Contact</a></li>
         </ul>
       </nav>
     );

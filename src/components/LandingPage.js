@@ -1,6 +1,6 @@
 import React, { Component } from "react";
-// import { isScrolledIntoView, resizeToCover, scrolledOverPercent } from "../utils/landingPageScript";
 import backgroundImg from "../images/WarmPoly.png";
+import chevron from "../images/chevron.svg";
 
 const landingPage = {
   backgroundImage: `url(${backgroundImg})`,
@@ -12,6 +12,8 @@ const landingPage = {
   backgroundSize: "cover",
   minHeight: window.innerHeight,
   display: "flex",
+  flexWrap: 'wrap',
+  flexDirection: 'column',
   height: "100%",
   justifyContent: "center" /*centers items on the line (the x-axis by default)*/,
   alignItems: "center" /*centers items on the cross-axis (y by default)*/
@@ -20,20 +22,21 @@ const landingPage = {
 const landingPageText = {
   font: "Arial",
   fontSize: "50px",
-  lineHeight: "50pt",
   color: "#fff",
-//   position: 'relative'
+  lineHeight: '1.75em',
+  position: 'relative'
 };
 
 export class LandingPage extends Component {
   render() {
     return (
-      <div style={landingPage} className="landingPage">
+      <div id='home' style={landingPage} className="landingPage">
         <div style={landingPageText} className='landingPageText'>
             <p> Hi, I'm Ved Kale </p>
-            <p> Software Engineer and Data Scientist </p>
-            <p style={{flexGrow: '1'}}></p>
+            <p> Software Engineer | Web Developer </p>
+            <p> Aspiring Data Scientist </p>
           </div>
+          <a href='/'><img src={chevron} className="arrow" alt="logo" /></a>
       </div>
     );
   }
