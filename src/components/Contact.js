@@ -32,26 +32,14 @@ export class Contact extends Component {
       message: this.state.message
     };
 
-    // axios
-    //   .post("API_URI", data)
-    //   .then(res => {
-    //     this.setState({ sent: true }, this.resetForm());
-    //   })
-    //   .catch(() => {
-    //     console.log("Message not sent");
-    //   });
-    axios({
-        method: "POST", 
-        url:"http://localhost:3002/send", 
-        data
-    }).then((response)=>{
-        if (response.data.msg === 'success'){
-            alert("Message Sent."); 
-            this.resetForm()
-        }else if(response.data.msg === 'fail'){
-            alert("Message failed to send.")
-        }
-    })
+    axios
+      .post("nodejs-express-git-zeit-branch.vedkale.now.sh", data)
+      .then(res => {
+        this.setState({ sent: true }, this.resetForm());
+      })
+      .catch(() => {
+        console.log("Message not sent");
+      });
   };
 
   resetForm = () => {
