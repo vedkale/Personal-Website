@@ -33,7 +33,7 @@ export class Contact extends Component {
     };
 
     axios
-      .post("nodejs-express-git-zeit-branch.vedkale.now.sh", data)
+      .post("nodejs-express.vedkale.now.sh", data)
       .then(res => {
         this.setState({ sent: true }, this.resetForm());
       })
