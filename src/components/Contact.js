@@ -19,8 +19,7 @@ export class Contact extends Component {
 
   formSubmit = e => {
     e.preventDefault();
-    console.log("FORM SUBMIT");
-    
+
 
     this.setState({
       buttonText: "...sending"
@@ -33,7 +32,7 @@ export class Contact extends Component {
     };
   
     axios
-      .post("http://localhost:4444/send", data)
+      .post("https://nodejs-express-axw0aqy5w.now.sh/api/v1", data)
       .then(res => {
         this.setState({ sent: true }, this.resetForm());
       })
