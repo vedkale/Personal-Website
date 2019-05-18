@@ -33,12 +33,16 @@ export class Contact extends Component {
     };
   
     axios
-      .post("https://nodejs-express.vedkale.now.sh/", data)
+      .post("https://nodejs-express.vedkale.now.sh/send", data)
       .then(res => {
         this.setState({ sent: true }, this.resetForm());
       })
-      .catch(() => {
-        console.log("Message not sent");
+      .catch(function (error) {
+        if (error.response) {
+          console.log(error.response.data);
+          console.log(error.response.status);
+          console.log(error.response.headers);
+        }
       });
   };
 
