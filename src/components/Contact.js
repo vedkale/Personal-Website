@@ -10,42 +10,41 @@ export class Contact extends Component {
   }
 
   state = {
-    name: '',
-    message: '',
-    email: '',
+    name: "",
+    message: "",
+    email: "",
     sent: false,
-    buttonText: 'Send Message'
-}
+    buttonText: "Send Message"
+  };
 
-formSubmit = async (e) => {
-    e.preventDefault()
+  formSubmit = e => {
+    e.preventDefault();
+    console.log("FORM SUBMIT");
+    
 
     this.setState({
-        buttonText: '...sending'
-    })
+      buttonText: "...sending"
+    });
 
     let data = {
-        name: this.state.name,
-        email: this.state.email,
-        message: this.state.message
-    }
-
-    try {
-        await axios.post('https://nodejs-express-axw0aqy5w.now.sh/api/v1', data)
-        this.setState({ sent: true }, this.resetForm())
-    } catch(err) {
-        console.log(err)
-    }
-
-}
-
-resetForm = () => {
-    this.setState({
-        name: '',
-        message: '',
-        email: ''
-    })
-}
+      name: this.state.name,
+      email: this.state.email,
+      message: this.state.message
+    };
+  
+    axios
+      .post("https://nodejs-express-744hoi9os.now.sh/send", data)
+      .then(res => {
+        this.setState({ sent: true }, this.resetForm());
+      })
+      .catch(function (error) {
+        if (error.response) {
+          console.log(error.response.data);
+          console.log(error.response.status);
+          console.log(error.response.headers);
+        }
+      });
+  };
 
   resetForm = () => {
     this.setState({
