@@ -33,7 +33,7 @@ export class Contact extends Component {
     };
   
     axios
-      .post("https://nodejs-express.vedkale.now.sh/send", data)
+      .post("http://localhost:4444/send", data)
       .then(res => {
         this.setState({ sent: true }, this.resetForm());
       })
