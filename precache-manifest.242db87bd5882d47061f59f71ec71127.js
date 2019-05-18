@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "3bf06096c59c551213c36dfa51fa8ba4",
+    "revision": "b3efa167b15beab67b59d4e1df11a81c",
     "url": "/index.html"
   },
   {
-    "revision": "1ca2fb1085a26756a89d",
+    "revision": "94854b418aec2f830140",
     "url": "/static/css/2.06565635.chunk.css"
   },
   {
-    "revision": "73dfa6a12834a1262e23",
-    "url": "/static/css/main.9dc41b9b.chunk.css"
+    "revision": "f06f004e7209ce66a41b",
+    "url": "/static/css/main.e49477ad.chunk.css"
   },
   {
-    "revision": "1ca2fb1085a26756a89d",
-    "url": "/static/js/2.4805192c.chunk.js"
+    "revision": "94854b418aec2f830140",
+    "url": "/static/js/2.7938b4a8.chunk.js"
   },
   {
-    "revision": "73dfa6a12834a1262e23",
-    "url": "/static/js/main.278ef3c2.chunk.js"
+    "revision": "f06f004e7209ce66a41b",
+    "url": "/static/js/main.517df15f.chunk.js"
   },
   {
     "revision": "42ac5946195a7306e2a5",
@@ -44,8 +44,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/media/keras.e1a99557.svg"
   },
   {
-    "revision": "946732cf6f2013edeb81fe721d29fd02",
-    "url": "/static/media/python.946732cf.svg"
+    "revision": "a7fc8a1016069bc9bc00aad6eea69c05",
+    "url": "/static/media/python.a7fc8a10.svg"
   },
   {
     "revision": "e865e05f4497b97721dafafddaf88150",
