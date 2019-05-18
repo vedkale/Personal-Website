@@ -31,9 +31,9 @@ export class Contact extends Component {
       email: this.state.email,
       message: this.state.message
     };
-
+  
     axios
-      .post("nodejs-express.vedkale.now.sh", data)
+      .post("https://create-react-app.vedkale.now.sh/", data)
       .then(res => {
         this.setState({ sent: true }, this.resetForm());
       })
