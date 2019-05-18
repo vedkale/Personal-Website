@@ -4,7 +4,7 @@ import chevron from "../images/chevron.svg";
 
 const landingPage = {
   backgroundImage: `url(${backgroundImg})`,
-//   position: "relative",
+  position: "relative",
   opacity: "1",
   backgroundAttachment: "fixed",
   backgroundPosition: "center",
@@ -12,31 +12,41 @@ const landingPage = {
   backgroundSize: "cover",
   minHeight: window.innerHeight,
   display: "flex",
-  flexWrap: 'wrap',
-  flexDirection: 'column',
+  flexWrap: "wrap",
+  flexDirection: "column",
   height: "100%",
-  justifyContent: "center" /*centers items on the line (the x-axis by default)*/,
+  justifyContent:
+    "center" /*centers items on the line (the x-axis by default)*/,
   alignItems: "center" /*centers items on the cross-axis (y by default)*/
 };
-
-const landingPageText = {
-  font: "Arial",
-  fontSize: "50px",
-  color: "#fff",
-  lineHeight: '1.75em',
-  position: 'relative'
-};
-
 export class LandingPage extends Component {
+  componentDidMount() {
+    // var clientWidth = function() {
+    //   return Math.max(window.innerWidth, document.documentElement.clientWidth);
+    // };
+    // var clientHeight = function () {  return Math.max(window.innerHeight, document.documentElement.clientHeight);};
+  }
+
   render() {
     return (
-      <div id='home' style={landingPage} className="landingPage">
-        <div style={landingPageText} className='landingPageText'>
-            <p> Hi, I'm Ved Kale </p>
-            <p> Software Engineer | Web Developer </p>
-            <p> Aspiring Data Scientist </p>
-          </div>
-          <a href='/'><img src={chevron} className="arrow" alt="logo" /></a>
+      <div id="home" style={landingPage} className="landingPage">
+        <div className="landingPageText">
+          <p style={{ whiteSpace: "nowrap" }}> Hi, I'm Ved Kale </p>
+          <p style={{ whiteSpace: "nowrap" }}> Software Engineer </p>
+          <p style={{ whiteSpace: "nowrap" }}> Web Developer </p>
+          <p style={{ whiteSpace: "nowrap" }}> Aspiring Data Scientist </p>
+        </div>
+        <div style={{ position: "absolute", bottom: "5px" }}>
+          {/* <p style={{fontSize:'32px'}}> Read More </p> */}
+          <a id="scroll" href="#skills">
+            <img
+              className="arrow"
+              style={{ minHeight: "5vh", minWidth: "5vh" }}
+              src={chevron}
+              alt="logo"
+            />
+          </a>
+        </div>
       </div>
     );
   }

@@ -9,7 +9,13 @@ import LandingPage from "./components/LandingPage";
 import Skills from "./components/Skills";
 import Projects from "./components/Projects";
 import Contact from "./components/Contact";
+import AOS from "aos";
+import "aos/dist/aos.css"; // You can also use <link> for styles
 // import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+// import express from 'express';
+// import bodyParser from 'body-parser';
+// import nodemailer from 'nodemailer';
+// import cors from 'cors';
 library.add(fab, faArrowDown, faCircle, faPaperPlane);
 
 class App extends Component {
@@ -28,6 +34,12 @@ class App extends Component {
       behavior: "instant"
     });
   };
+  
+  componentDidMount() 
+    {
+        AOS.init();
+        //AOS.refresh()
+    }
 
   render() {
     return (
