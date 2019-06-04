@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import AOS from "aos";
 import axios from "axios";
 import "aos/dist/aos.css"; // You can also use <link> for styles
@@ -14,15 +14,14 @@ export class Contact extends Component {
     message: "",
     email: "",
     sent: false,
-    buttonText: "Send Message"
+    buttonText: <FontAwesomeIcon icon={"paper-plane"} size="2x" />
   };
 
   formSubmit = e => {
     e.preventDefault();
-    console.log("FORM SUBMIT");
-
+    
     this.setState({
-      buttonText: "...sending"
+      buttonText: <FontAwesomeIcon icon={"spinner"} spin size="2x" />
     });
 
     let data = {
@@ -50,7 +49,7 @@ export class Contact extends Component {
       name: "",
       message: "",
       email: "",
-      buttonText: "Message Sent"
+      buttonText: <FontAwesomeIcon icon={"check"} size="2x" />
     });
   };
 
@@ -114,7 +113,6 @@ export class Contact extends Component {
                 <div className="wrap-contact-form-btn">
                   <div className="contact-form-bgbtn" />
                   <button type="submit" className="contact-form-btn">
-                    {/* <FontAwesomeIcon icon={"paper-plane"} size="2x" /> */}
                     { this.state.buttonText }
                   </button>
                 </div>

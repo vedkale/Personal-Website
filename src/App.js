@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { fab } from "@fortawesome/free-brands-svg-icons";
-import { faArrowDown, faCircle, faPaperPlane } from "@fortawesome/free-solid-svg-icons";
+import { faArrowDown, faCircle, faPaperPlane, faSpinner, faCheck } from "@fortawesome/free-solid-svg-icons";
 import "./App.css";
 import Navigation from "./components/Navigation";
 import Footer from "./components/Footer";
@@ -16,7 +16,7 @@ import "aos/dist/aos.css"; // You can also use <link> for styles
 // import bodyParser from 'body-parser';
 // import nodemailer from 'nodemailer';
 // import cors from 'cors';
-library.add(fab, faArrowDown, faCircle, faPaperPlane);
+library.add(fab, faArrowDown, faCircle, faPaperPlane, faSpinner, faCheck);
 
 class App extends Component {
 
