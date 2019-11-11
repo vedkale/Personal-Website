@@ -34,7 +34,7 @@ export class LandingPage extends Component {
           <p style={{ whiteSpace: "nowrap" }}> Hi, I'm Ved Kale </p>
           <p style={{ whiteSpace: "nowrap" }}> Software Engineer </p>
           <p style={{ whiteSpace: "nowrap" }}> Web Developer </p>
-          <p style={{ whiteSpace: "nowrap" }}> Aspiring Data Scientist </p>
+          <p style={{ whiteSpace: "nowrap" }}> Data Scientist </p>
         </div>
         <div style={{ position: "absolute", bottom: "5px" }}>
           {/* <p style={{fontSize:'32px'}}> Read More </p> */}

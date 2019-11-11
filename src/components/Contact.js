@@ -72,6 +72,7 @@ export class Contact extends Component {
                   className="input"
                   type="text"
                   name="name"
+                  onfocus="this.value=''"
                   value={this.state.name}
                   required
                   onChange={e => this.setState({ name: e.target.value })}
@@ -81,7 +82,7 @@ export class Contact extends Component {
 
               <div
                 className="wrap-input validate-input"
-                // data-validate="Valid email is required: ex@abc.xyz"
+                data-validate="Valid email is required: ex@abc.xyz"
               >
                 <input
                   className="input"
@@ -89,6 +90,7 @@ export class Contact extends Component {
                   name="email"
                   onChange={e => this.setState({ email: e.target.value })}
                   required
+                  onfocus="this.value=''"
                   value={this.state.email}
                 />
                 <span className="focus-input" data-placeholder="EMAIL" />

@@ -149,7 +149,7 @@ footer a {
   position: relative;
   display: inline-block;
   overflow: hidden;
-  max-width: 50%;
+  max-width: 30%;
   height: auto;
 }
 .hvrbox img {
@@ -487,6 +487,7 @@ textarea.input + .focus-input::after {
 
 .input:focus + .focus-input::after {
   top: -13px;
+  opacity: 0;
 }
 
 .input:focus + .focus-input::before {
@@ -495,6 +496,7 @@ textarea.input + .focus-input::after {
 
 .has-val.input + .focus-input::after {
   top: -13px;
+  opacity: 0;
 }
 
 .has-val.input + .focus-input::before {
